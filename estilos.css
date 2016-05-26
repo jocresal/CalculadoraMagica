@@ -1,0 +1,123 @@
+*{
+	margin: 0; 
+	padding: 0;
+    font-family: sans-serif;
+}
+
+#contenedor{
+    height:100vh;
+}
+#contenedor>*{
+    box-sizing: border-box;
+
+    text-align: center;
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center       
+}
+
+#resultado{
+    border: none;
+    text-align: right !important;
+    padding: 5%;
+    /*display: flex !important;
+    align-items: center;
+    justify-content: flex-end;*/
+    height: 25%;
+    width: 100%;
+    background: black;
+    color: white;
+    font-size: 5em;
+}
+#resultado:focus{
+    outline: none;
+}
+
+.panelGris{
+    background: #4D4D4D !important;
+    border-color: black;
+    color: white;
+}
+.panelGris:hover{
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+.panelGris:active{
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.renglon{
+    box-sizing: border-box;
+    background: white;
+    height: 12.5%;
+    width: 25%;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    float: left;
+}
+
+.numero:hover{
+    background: rgba(0,0,0, 0.1) !important;
+}
+.numero:active{
+    background: rgba(0,0,0, 0.1) !important;
+}
+
+.signo{
+    background: #337EFE;
+    border-color: black;
+    color: white;
+}
+.signo:hover{
+    background: rgba(46,115,231, 0.5) !important;
+}
+.signo:active{
+    background: rgba(46,115,231,0.5) !important;
+}
+
+.signoBorrar{
+    background: #FE0000;
+    box-sizing: border-box;
+    height: 12.5%;
+    width: 25%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    float: left;
+    color: white;
+}
+.signoBorrar:hover{
+    background: rgba(254,0,0, 0.5) !important;
+}
+.signoBorrar:active{
+    background: rgba(255,0,0,0.5) !important;
+}
+
+.signoMas{
+    box-sizing: border-box;
+    width: 25%;
+    height: 25%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    float: right;
+}
+
+.signoIgual{
+    box-sizing: border-box;
+    width: 50%;
+    height: 12.5%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background: #FE8826;
+    float: right;
+    color: white;
+}
+.signoIgual:hover{
+    background: rgba(254,136,38, 0.5) !important;
+}
+.signoIgual:active{
+    background: rgba(254,136,38,0.5) !important;
+}

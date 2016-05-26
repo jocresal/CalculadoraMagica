@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <input type="text" id="resultado" value="0">
+        <!-- <div id="resultado"></div>  -->
+        
+        <div class="renglon panelGris">∓</div>    
+        <div class="renglon panelGris perm">(</div>
+        <div class="renglon panelGris perm">)</div>
+        <div class="renglon panelGris" id="secreto" onclick="secreto()">⋆</div>
+
+        <div class="renglon numero perm">7</div>
+        <div class="renglon numero perm">8</div>
+        <div class="renglon numero perm">9</div>
+        <div class="renglon signo perm">/</div>
+
+        <div class="renglon numero perm">4</div>
+        <div class="renglon numero perm">5</div>
+        <div class="renglon numero perm">6</div>
+        <div class="renglon signo perm">*</div>
+
+        <div class="renglon numero perm">1</div>
+        <div class="renglon numero perm">2</div>
+        <div class="renglon numero perm">3</div>
+        <div class="renglon signo perm">-</div>
+
+        <div class="renglon numero perm">0</div>
+        <div class="renglon numero perm">.</div>
+        <div class="renglon numero perm">%</div>
+        <div class="signoMas signo perm">+</div> 
+
+        <div class="signoBorrar" onclick="borrar()">C</div>
+        <div class="signoIgual" onclick="calcular()">=</div>
+
+    </div>
+
+</body>
+	<script>
+		function secreto(){
+			if(document.getElementById('resultado').value=="007"){
+			     window.location.assign('topSecret.html');
+            }
+		}
+
+        document.addEventListener('click', function(e){
+            e = e || window.event;
+            var target = e.target || e.srcElement;
+            
+            res=document.getElementById('resultado').value;
+            
+            var pieces = target.className.split(/[\s,]+/);
+            if(pieces[pieces.length-1]=="perm"){
+                var text = target.textContent || text.innerText;  
+                res+=text;
+                document.getElementById('resultado').value=res;
+            }            
+        }, false);
+
+        function calcular(){
+            document.getElementById('resultado').value=eval(document.getElementById('resultado').value);
+        }    
+        
+        function borrar(){
+            document.getElementById('resultado').value="";
+        }
+	</script>
+</html>
